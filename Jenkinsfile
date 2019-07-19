@@ -1,6 +1,6 @@
 node {
     stage('SCM'){
-        git 'ssh://git@localhost:7999/proj/ex-3.git'
+        git 'git@github.com:lyogi4091/Ex-3.git'
     stage('Building Docker image'){  
                 sh 'sudo docker build -t ubuntu_image_remotely .';
                 sh 'sudo docker run -it -d --name testcontainer_remote_ex3 -v /home/user/ex-3:/opt ubuntu_image_remotely';
@@ -22,8 +22,8 @@ node {
                 sh 'autopep8 -i python_bad.py';
                 println "python_bad.py is now formatted";
                }
-    stage('Pushing the formatted code to BitBucket'){
-        dir('/var/lib/jenkins/workspace/Exercise3'){
+    stage('Pushing the formatted code to GitHub'){
+        dir('/var/lib/jenkins/workspace/Format-check-push-back'){
             try{
                 sh 'git config --global user.email "lingojuyogesh.kumar@ltts.com"';
                 sh 'git config --global user.name "Yogesh Kumar"'
