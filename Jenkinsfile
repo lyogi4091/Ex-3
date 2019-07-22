@@ -29,9 +29,9 @@ node {
     stage('Pushing the formatted code'){
         dir('/home/ciuser/Ex-3'){
             try{
-                sh 'git add python*.py';
-                sh 'git commit -m "Commit after autopep8"';
-                sh 'git push origin master';
+                sh 'sudo git add python*.py';
+                sh 'sudo git commit -m "Commit after autopep8"';
+                sh 'sudo git push origin master';
         }catch (nothing){
             echo "No changes found to push"
         }
