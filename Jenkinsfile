@@ -27,6 +27,7 @@ node {
                 }
                 }
     stage('Pushing the formatted code'){
+        git 'git@github.com:lyogi4091/Ex-3.git'
         dir('/home/ciuser/Ex-3'){
             try{
                 sh 'sudo git add python*.py';
