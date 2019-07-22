@@ -27,14 +27,15 @@ node {
                 }
                 }
     stage('Pushing the formatted code'){
-        git 'git@github.com:lyogi4091/Ex-3.git'
-        dir('/home/ciuser/Ex-3'){
+        dir('/home/ciuser/Exercise-3'){
             try{
-                sh 'sudo git add python*.py';
+                sh 'sudo git config --global user.email "lingojuyogesh.kumar@ltts.com"';
+                sh 'sudo git config --global user.name "Yogesh Kumar"'
+                sh 'sudo git add python_bad.py';
                 sh 'sudo git commit -m "Commit after autopep8"';
                 sh 'sudo git push origin master';
-        }catch (nothing){
-            echo "No changes found to push"
+                }catch (d){
+                echo "No changes found to push"
         }
     }
     }
