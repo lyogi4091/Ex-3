@@ -22,7 +22,7 @@ p = "My name is {0[0]} and I joined this {0[1]} organisation on {0[2]}th of Dece
     z)
 print(p)
 print("========================================")
-q = "%s is averaging %g as he played just %d matches in his entire career." % (
+q = "%s is averaging %g as he played just %d matches in his entire career" % (
     name, average, matches)
 print(q)
 print("===============")

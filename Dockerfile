@@ -6,4 +6,4 @@ RUN apt-get update && apt-get install -y \
 RUN pip3 install pycodestyle &&\
 	pip3 install --upgrade pycodestyle &&\
 	pip3 install autopep8
-RUN echo "Docker is ready for python & pycodestyle."
+RUN echo "Docker is ready for python & pycodestyle"
